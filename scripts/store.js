@@ -5,8 +5,8 @@ async function main() {
     const Box = await ethers.getContractFactory('Box');
     const box = await Box.attach(address);
 
-    const res = await box.retrieve();
-    console.log(`${res.toString()}`);
+    const res = await box.store(76);
+    console.dir(res);
 }
 
 main()
